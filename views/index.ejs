@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="UTF-8">
+    <title>Doctorsh: Online Health Consulting</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.21.0/js/uikit.min.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.21.0/js/components/form-select.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/javascripts/layout.js"></script>
+    <script type="text/javascript" src="//cdn.voximplant.com/voximplant.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.21.0/css/uikit.min.css" type="text/css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.21.0/css/uikit.almost-flat.min.css" type="text/css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.21.0/css/components/form-select.css" type="text/css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.21.0/css/components/form-select.almost-flat.min.css" type="text/css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" media="screen" charset="utf-8" />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  	<div id="container">
+  		<div class="tip" style="display:none">Please allow access to your camera and microphone</div>
+  	</div>
+  	<div id="loginPanel" class="uk-modal">
+      	<div class="uk-modal-dialog">
+          	<h3>New Conference</h3>
+          	<form class="uk-form">
+  	        	<fieldset data-uk-margin>
+  	        		<div class="uk-form-row"><input id="conferenceId_input" type="text" class="uk-width-1-1 uk-form-large" placeholder="Conference PIN"></div>
+  	        		<div class="uk-form-row"><input id="displayName_input" type="text" class="uk-width-1-1 uk-form-large" placeholder="Your name"></div>
+  	        		<div class="uk-form-row" style="text-align:center"><button id="startConfButton" class="uk-button uk-button-primary uk-button-large">Start Coference</button></div>
+  	    		</fieldset>
+          	</form>
+      	</div>
+  	</div>
   </body>
+
+  <script type="text/javascript" src="/javascripts/app.js"></script>
 </html>
